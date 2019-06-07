@@ -30,7 +30,8 @@ RUN cd ~/.node-red \
   && npm install ~/activageas/influxdb-api \
   && npm install ~/activageas/fiware-orion \
   && npm install ~/activageas/universaal \
-  && npm install ~/activageas/mwtranslator \
+  && npm install ~/activageas/mwtranslatoractivage \
+  && npm install ~/activageas/mwtranslatoractivageconfig \
   && npm install ~/RedMap \
   && npm install node-red-dashboard \
   && npm install node-red-contrib-counter
