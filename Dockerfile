@@ -34,7 +34,9 @@ RUN cd ~/.node-red \
   && npm install ~/activageas/mwtranslatoractivageconfig \
   && npm install ~/RedMap \
   && npm install node-red-dashboard \
-  && npm install node-red-contrib-counter
+  && npm install node-red-contrib-counter \
+  && npm install node-red-contrib-play-audio \
+  && npm install node-red-node-email
 
 ADD gui .node-red/
 
