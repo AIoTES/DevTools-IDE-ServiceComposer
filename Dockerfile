@@ -36,7 +36,8 @@ RUN cd ~/.node-red \
   && npm install node-red-dashboard \
   && npm install node-red-contrib-counter \
   && npm install node-red-contrib-play-audio \
-  && npm install node-red-node-email
+  && npm install node-red-node-email \
+  && npm install @exlinc/keycloak-passport
 
 ADD gui .node-red/
 

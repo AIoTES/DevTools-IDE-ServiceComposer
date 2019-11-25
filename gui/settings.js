@@ -111,6 +111,32 @@ module.exports = {
     //    }]
     //},
 
+    adminAuth: {
+        type:"strategy",
+        strategy: {
+            name: "Keycloak",
+            label: 'Sign in with KeyCloak',
+            icon:"fa-key",
+            strategy: require("@exlinc/keycloak-passport"),
+            options: {
+                host: process.env.KEYCLOAK_HOST,
+                realm: process.env.KEYCLOAK_REALM,
+                clientID: process.env.KEYCLOAK_CLIENT_ID,
+                clientSecret: process.env.KEYCLOAK_CLIENT_SECRET,
+                callbackURL: process.env.KEYCLOAK_CALLBACK_URL,
+				authorizationURL: process.env.KEYCLOAK_AUTH_URL,
+                tokenURL: process.env.KEYCLOAK_TOKEN_URL,
+				userInfoURL: process.env.KEYCLOAK_USER_INFO_URL,
+                verify: function(accessToken, refreshToken, profile, done) {
+                    done(null, profile);
+                }
+            },
+        },
+        users: [
+           { username: "*",permissions: ["*"]}
+        ]
+    },
+
     // To password protect the node-defined HTTP endpoints (httpNodeRoot), or
     // the static content (httpStatic), the following properties can be used.
     // The pass field is a bcrypt hash of the password.
