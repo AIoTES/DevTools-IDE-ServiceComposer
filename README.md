@@ -32,5 +32,5 @@ The web interface will be available at http://localhost:1880
 
 You can upload the image to the Docker registry using:
 
-`docker push docker-activage.satrd.es/activage-nr-service-composition:0.0.2`
+`docker push docker-activage.satrd.es/activage-nr-service-composition:<version>`
 
