@@ -10,6 +10,8 @@ The current implementation of this tool is based on [Node-RED](https://nodered.o
 
 The Service Composer is deployed as part of the AIoTES IDE Docker stack.
 
+Current version: 0.0.3
+
 
 
 ### Build docker image
