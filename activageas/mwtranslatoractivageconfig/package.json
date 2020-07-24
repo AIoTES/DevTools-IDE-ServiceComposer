@@ -1,0 +1,22 @@
+{
+  "name": "mwtranslatoractivageconfig",
+  "version": "1.0.0",
+  "description": "Middleware translator between IoT platform's data model and ACTIVAGE's data model and vice versa with completely configurable server path",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SATRD",
+  "license": "Apache-2.0",
+  "node-red": {
+    "nodes": {
+      "translator-to-activage-config": "translator-to/translator-to.js",
+      "translator-from-activage-config": "translator-from/translator-from.js",
+      "translator-server-activage-config": "translator-server/translator-server.js"
+    }
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}

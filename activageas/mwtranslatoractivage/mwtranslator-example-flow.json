@@ -1,0 +1,245 @@
+[
+  {
+      "id": "50a332ae.9a645c",
+      "type": "tab",
+      "label": "Flow 1",
+      "disabled": false,
+      "info": ""
+  },
+  {
+      "id": "c59a35d3.0037d8",
+      "type": "inject",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 160,
+      "y": 440,
+      "wires": [
+          [
+              "c2c3907c.032f98"
+          ]
+      ]
+  },
+  {
+      "id": "c2c3907c.032f98",
+      "type": "function",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "func": "msg.translate={\n    \"@graph\": [\n        {\n            \"@graph\": [\n                {\n                    \"@id\": \"msg:meta/5b20beee-6bfe-4000-aa9b-6dc0ad6deaba\",\n                    \"msg:conversationID\": \"conv4690c6c1-2140-47a3-b5e2-0a45fbe1afd7\",\n                    \"msg:dateTimeStamp\": \"2019-02-01T12:13:42.175+01:00\",\n                    \"msg:messageID\": \"msg27f76b5e-da6e-44d1-9d97-328ac5c90a80\",\n                    \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\": [\n                        {\n                            \"@id\": \"msg:Observation\"\n                        },\n                        {\n                            \"@id\": \"msg:meta\"\n                        }\n                    ]\n                }\n            ],\n            \"@id\": \"msg:metadata\"\n        },\n        {\n            \"@graph\": [\n                {\n                    \"@id\": \"InterIoT:syntax/FIWAREv2#_0\",\n                    \"InterIoT:syntax/FIWAREv2#hasAttribute\": [\n                        {\n                            \"@id\": \"InterIoT:syntax/FIWAREv2#_1\"\n                        },\n                        {\n                            \"@id\": \"InterIoT:syntax/FIWAREv2#_4\"\n                        }\n                    ],\n                    \"InterIoT:syntax/FIWAREv2#hasId\": \"Room1\",\n                    \"InterIoT:syntax/FIWAREv2#hasType\": \"Room\",\n                    \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\": {\n                        \"@id\": \"InterIoT:syntax/FIWAREv2#Entity\"\n                    }\n                },\n                {\n                    \"@id\": \"InterIoT:syntax/FIWAREv2#_1\",\n                    \"InterIoT:syntax/FIWAREv2#hasName\": \"pressure\",\n                    \"InterIoT:syntax/FIWAREv2#hasValue\": {\n                        \"@id\": \"InterIoT:syntax/FIWAREv2#_2\"\n                    },\n                    \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\": {\n                        \"@id\": \"InterIoT:syntax/FIWAREv2#Attribute\"\n                    }\n                },\n                {\n                    \"@id\": \"InterIoT:syntax/FIWAREv2#_2\",\n                    \"InterIoT:syntax/FIWAREv2#hasAttrValue\": {\n                        \"@type\": \"http://www.w3.org/2001/XMLSchema#int\",\n                        \"@value\": \"720\"\n                    },\n                    \"InterIoT:syntax/FIWAREv2#hasMetadata\": {\n                        \"@id\": \"InterIoT:syntax/FIWAREv2#_3\"\n                    },\n                    \"InterIoT:syntax/FIWAREv2#hasType\": \"Integer\"\n                },\n                {\n                    \"@id\": \"InterIoT:syntax/FIWAREv2#_3\",\n                    \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\": {\n                        \"@id\": \"InterIoT:syntax/FIWAREv2#Metadata\"\n                    }\n                },\n                {\n                    \"@id\": \"InterIoT:syntax/FIWAREv2#_4\",\n                    \"InterIoT:syntax/FIWAREv2#hasName\": \"temperature\",\n                    \"InterIoT:syntax/FIWAREv2#hasValue\": {\n                        \"@id\": \"InterIoT:syntax/FIWAREv2#_5\"\n                    },\n                    \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\": {\n                        \"@id\": \"InterIoT:syntax/FIWAREv2#Attribute\"\n                    }\n                },\n                {\n                    \"@id\": \"InterIoT:syntax/FIWAREv2#_5\",\n                    \"InterIoT:syntax/FIWAREv2#hasAttrValue\": {\n                        \"@type\": \"http://www.w3.org/2001/XMLSchema#int\",\n                        \"@value\": \"23\"\n                    },\n                    \"InterIoT:syntax/FIWAREv2#hasMetadata\": {\n                        \"@id\": \"InterIoT:syntax/FIWAREv2#_6\"\n                    },\n                    \"InterIoT:syntax/FIWAREv2#hasType\": \"Float\"\n                },\n                {\n                    \"@id\": \"InterIoT:syntax/FIWAREv2#_6\",\n                    \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\": {\n                        \"@id\": \"InterIoT:syntax/FIWAREv2#Metadata\"\n                    }\n                }\n            ],\n            \"@id\": \"msg:payload\"\n        }\n    ],\n    \"@context\": {\n        \"msg\": \"http://inter-iot.eu/message/\",\n        \"iiotex\": \"http://inter-iot.eu/GOIoTPex#\",\n        \"geosparql\": \"http://www.opengis.net/ont/geosparql#\",\n        \"iiot\": \"http://inter-iot.eu/GOIoTP#\",\n        \"InterIoT\": \"http://inter-iot.eu/\",\n        \"ssn\": \"http://www.w3.org/ns/ssn/\",\n        \"sosa\": \"http://www.w3.org/ns/sosa/\"\n    }\n};\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 350,
+      "y": 440,
+      "wires": [
+          [
+              "ca534327.072e28"
+          ]
+      ]
+  },
+  {
+      "id": "916941c9.cc84c8",
+      "type": "json",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "property": "payload",
+      "action": "",
+      "pretty": false,
+      "x": 850,
+      "y": 440,
+      "wires": [
+          [
+              "10fb2b57.d7d0b5"
+          ]
+      ]
+  },
+  {
+      "id": "10fb2b57.d7d0b5",
+      "type": "debug",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "true",
+      "x": 1040,
+      "y": 440,
+      "wires": []
+  },
+  {
+      "id": "5d8b1614.da3e4",
+      "type": "inject",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 160,
+      "y": 180,
+      "wires": [
+          [
+              "6a39f8bd.cd6c28"
+          ]
+      ]
+  },
+  {
+      "id": "6a39f8bd.cd6c28",
+      "type": "function",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "func": "msg.translate={\n  \"id\": \"Room1\",\n  \"type\": \"Room\",\n  \"pressure\": {\n    \"type\": \"Integer\",\n    \"metadata\": {},\n    \"value\": 720\n  },\n  \"temperature\": {\n    \"type\": \"Float\",\n    \"metadata\": {},\n    \"value\": 23\n  }\n};\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 350,
+      "y": 180,
+      "wires": [
+          [
+              "11ce1cfa.f4adcb"
+          ]
+      ]
+  },
+  {
+      "id": "11ce1cfa.f4adcb",
+      "type": "json",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "property": "payload",
+      "action": "",
+      "pretty": false,
+      "x": 850,
+      "y": 180,
+      "wires": [
+          [
+              "46edad2e.55d49c"
+          ]
+      ]
+  },
+  {
+      "id": "46edad2e.55d49c",
+      "type": "debug",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "true",
+      "x": 1040,
+      "y": 180,
+      "wires": []
+  },
+  {
+      "id": "9b11e05.0fd5fa",
+      "type": "json",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "property": "payload",
+      "action": "",
+      "pretty": false,
+      "x": 850,
+      "y": 300,
+      "wires": [
+          [
+              "b8af1b9b.7d44"
+          ]
+      ]
+  },
+  {
+      "id": "b8af1b9b.7d44",
+      "type": "debug",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "true",
+      "x": 1040,
+      "y": 300,
+      "wires": []
+  },
+  {
+      "id": "cd94eeab.e55738",
+      "type": "function",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "func": "msg.translate=JSON.parse(msg.payload);\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 390,
+      "y": 300,
+      "wires": [
+          [
+              "f8c3477b.b66918"
+          ]
+      ]
+  },
+  {
+      "id": "9be47aa8.11554",
+      "type": "translator-from-activage",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "server": "7d9a2760.0bc75",
+      "data": "",
+      "iotplatform": "fiware",
+      "setdata": false,
+      "x": 610,
+      "y": 180,
+      "wires": [
+          [
+              "cd94eeab.e55738"
+          ]
+      ]
+  },
+  {
+      "id": "f8c3477b.b66918",
+      "type": "translator-to-activage",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "server": "7d9a2760.0bc75",
+      "data": "",
+      "iotplatform": "fiware",
+      "setdata": false,
+      "x": 600,
+      "y": 300,
+      "wires": [
+          [
+              "9b11e05.0fd5fa"
+          ]
+      ]
+  },
+  {
+      "id": "ca534327.072e28",
+      "type": "translator-to-activage",
+      "z": "50a332ae.9a645c",
+      "name": "",
+      "server": "7d9a2760.0bc75",
+      "data": "",
+      "iotplatform": "fiware",
+      "setdata": false,
+      "x": 600,
+      "y": 440,
+      "wires": [
+          [
+              "916941c9.cc84c8"
+          ]
+      ]
+  },
+  {
+      "id": "7d9a2760.0bc75",
+      "type": "translator-server-activage",
+      "z": "",
+      "host": "localhost",
+      "port": "4568"
+  }
+]

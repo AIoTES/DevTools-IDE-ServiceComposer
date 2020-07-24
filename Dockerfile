@@ -1,19 +1,21 @@
-FROM node:8.0.0
+FROM node:12.0.0
 
 RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
 RUN apt-get update \
-  && apt-get upgrade -y \
-  && apt-get install -y git
+  && apt-get upgrade -y --force-yes \
+  && apt-get install -y --force-yes git
 
 RUN npm install -g --unsafe-perm node-red
 
 RUN useradd -ms /bin/bash nodered
 
+COPY ./activageas /home/nodered/activageas
+
 WORKDIR /home/nodered
 
-USER nodered
+RUN chown -R nodered:nodered /home/nodered/activageas
 
-RUN git clone https://noder:noder@git.activageproject.eu/noder/activageas.git && cd activageas && git checkout activage
+USER nodered
 
 RUN git clone https://github.com/interiot/RedMap
 

@@ -1,0 +1,33 @@
+<script type="text/x-red" data-template-name="translator-server-activage-config">
+    <div class="form-row">
+        <label for="node-config-input-port"><i class="icon-bookmark"></i> Host</label>
+        <input type="text" id="node-config-input-host">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-port"><i class="icon-bookmark"></i> Port</label>
+        <input type="text" id="node-config-input-port">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-path"><i class="icon-bookmark"></i> Path</label>
+        <input type="text" id="node-config-input-path">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="translator-server-activage-config">
+    <p>MWTRANSLATOR SERVER</p>
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('translator-server-activage-config',{
+        category: 'config',
+        defaults: {
+            host: {value:"localhost",required:true},
+            port: {value:4568,required:true,validate:RED.validators.number()},
+            path: {value:""}
+        },
+        label: function() {
+            return this.host+":"+this.port+this.path;
+        }
+    });
+</script>
