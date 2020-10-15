@@ -12,9 +12,6 @@ The current implementation of this tool is based on [Node-RED](https://nodered.o
 
 The Service Composer is deployed as part of the AIoTES IDE Docker stack.
 
-Current Docker image version: 0.0.3
-
-
 
 ### Adding new nodes
 
@@ -38,7 +35,7 @@ Service composition in Node-RED is based on the definition of flows. Node-RED pr
 
 To build a new Docker image, run:
 
-`sudo docker build --no-cache -t docker-activage.satrd.es/activage-nr-service-composition:<version> .`
+`sudo docker build --no-cache -t aiotesdocker/devtools-ide-servicecomposer:<version> .`
 
 
 
@@ -47,20 +44,18 @@ To build a new Docker image, run:
 To test the new image, you can run it in Docker using:
 
 ```
-sudo docker run -d -p 1880:1880 docker-activage.satrd.es/activage-nr-service-composition:<version>
+sudo docker run -d -p 1880:1880 aiotesdocker/devtools-ide-servicecomposer:<version>
 chmod a+rwx -R nodered-data
 ```
 
 The web interface will be available at http://localhost:1880
 
 
-You can upload the image to the Docker registry using:
-
-`docker push docker-activage.satrd.es/activage-nr-service-composition:<version>`
-
-
 
 ## Further information
+
+[Available Docker images](https://hub.docker.com/r/aiotesdocker/devtools-ide-servicecomposer)
+
 
 ### Additional Node-RED information
 
